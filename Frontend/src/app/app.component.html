@@ -1,0 +1,16 @@
+<header>
+  <ul>
+    <!--El [routerLinkActive]="['actived']" sirve para añadirle la clase en cuestión al elemento cuando se detecte que ese link esta activo en ese momento-->
+    <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']">Sobre mi</a></li>
+    <li><a [routerLink]="['/proyectos']" [routerLinkActive]="['actived']">Proyectos</a></li>
+    <li id="logo"><a href="#">JC</a></li><!--Aquí va el logotipo en png-->
+    <li><a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['actived']">Crear Proyecto</a></li>
+    <li><a [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Contacto</a></li>
+  </ul>
+</header>
+<section id="content">
+  <router-outlet></router-outlet>
+</section>
+<footer>
+  Master en javaScript de victorroblesweb.es %copy;
+</footer>
