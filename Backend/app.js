@@ -2,6 +2,7 @@
 /**
  * Se importan los módulos necesarios
  */
+const morgan = require('morgan');
 const express = require('express');
 //Módulo de rutas realizado con anterioridad.
 const routes = require('./rutes/project');
@@ -13,6 +14,7 @@ const app = express();
 //Middlewares
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+app.use(morgan('dev'));
 
 
 /*

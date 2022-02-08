@@ -92,7 +92,8 @@ header #logo a:hover{
 
 /*Contenedor principal*/
 #content{
-    min-height: 500px;
+    min-height: 570px;
+    height: auto;
     width: 75%;
     margin: 0px auto;
     box-shadow: 0px 0px 40px black;
@@ -150,4 +151,161 @@ article.about{
     padding-top: 20px;
     padding-bottom: 30px;
     text-align: justify;
+}
+
+/*Estilos generales de la página de crear proyecto*/
+.container{
+    padding: 50px;
+    padding-top: 10px;
+}
+
+.container .imageDetail{
+    float: left;
+    width: 60%;
+}
+
+.container .imageDetail img{
+    width: 100%;
+}
+
+
+.container .data{
+    display: block;
+    float: left;
+    width: 30%;
+    margin-left: 30px;
+    text-align: justify;
+}
+
+.container h2{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/*Estilos para la sección del formulario*/
+form{
+    width: 80%;
+}
+
+form label{
+    display: block;
+    width: 100%;  
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea{
+    width: 40%;
+    padding: 5px;
+
+}
+
+form button,
+form input[type="submit"],
+.button-edit,
+.button-delete{
+    display: block;
+    font-size: 17px;
+    padding: 10px;
+    margin-top: 15px;
+    color: white;
+    background: rgba(53, 103, 164, 1);
+    border: 1px solid rgba(13, 67, 133, 1);
+    cursor: pointer;
+}
+
+.button-edit,
+.button-delete{
+    width: 40%;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+}
+
+.button-edit{
+    background: #9AF512;
+}
+
+.button-delete{
+    background: #FF5656;
+}
+
+form button:hover,
+form input[type="submit"]:hover{
+    background: rgba(53, 103, 164, 0.8);
+    border: 1px solid rgba(13, 67, 133, 1);
+}
+
+form input[disabled]{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.formError{
+    font-size: 13px;
+    padding: 3px;
+    background: red;
+    color: white;
+    margin-left: 5px;
+}
+
+/*Mensaje de exito o fallo*/
+.message{
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #eee;
+}
+
+.success{
+    background: green;
+    color: white;
+}
+
+.message a{
+    color: white;
+}
+
+.failed{
+    background: red;
+    color: white;
+}
+
+/*Estilos de la página de proyectos*/
+.project{
+    list-style: none;
+    display: block;
+    float: left;
+    width: 40%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.project .image{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.project img{
+    width: 100%;
+}
+
+.project a{
+    text-decoration: none;
+    color: black;
+}
+/*Estilos del mensaje de confirmación*/
+.confirm {
+    display:block;
+    font-weight: bold;
+    margin-top: 20px;
 }

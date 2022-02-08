@@ -73,6 +73,12 @@ router.delete('/project/:id', projectController.deleteProject);
  */
 router.post('/uploadImage/:id', multipartMiddleware, projectController.uploadImage);
 
+/**
+ * Método encargado de recibir una petición HTTP GET y de esta manera
+ * obtener una imagen en algun lugar del servidor mediante el backend.
+ */
+router.get('/getImage/:image', projectController.getImageFile);
+
 
 
 /**

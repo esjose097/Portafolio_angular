@@ -4,5 +4,5 @@
  */
 
 export const Global = {
-    url: "https://localhost:3700/api/"
+    url: "http://localhost:3700/api/"
 }

@@ -1,1 +1,19 @@
-<p>projects works!</p>
+<div class="container">
+    <h2>Proyectos</h2>
+    <ul>
+        <!--El "*ngFor" representa un for en el fomulario el cual puede obtener
+        propiedades publicas y acceder a su información como en este caso que se esta
+        entrando al array de proyectos en el componente y este se utiliza para ser iterado.-->
+        <li *ngFor="let project of projects" class="project">
+            <a [routerLink] ="['/proyecto/', project._id]">
+                <!--A esto se le llama "mascara" el cual se encarga de recortar lo que
+                sobresalga de la imagen.-->
+                <div class="image">
+                    <img src="{{url+'getImage/'+project.image}}" *ngIf="project.image"/>
+                </div>>
+                <h3>{{project.name}}</h3>
+                <p>{{project.category}}</p>
+            </a>
+        </li>
+    </ul>
+</div>

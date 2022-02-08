@@ -10,6 +10,8 @@ const mongoose = require('mongoose');
 const Project = require('../models/project');
 /*Libreria para poder manipular archivos en el sistema*/
 const fs = require('fs');
+/*Libreria para poder acceder a las rutas físicas*/
+const path = require('path');
 
 mongoose.pluralize(null);
 
@@ -179,6 +181,29 @@ getProject: function(req,res){
         {
             return res.status(200).send({message:"Imagen no subida..."});
         }
+    },
+
+    /**
+     * Método encargado de obtener una imagen de una ruta física en el backend/servidor.
+     * @param {*} req 
+     * @param {*} res 
+     */
+    getImageFile: function(req,res){
+        var file = req.params.image;
+        var path_file = './uploads/'+file;
+        /*El método exist esta obsoleto y ya no funciona, ahora se utiliza el método "access" para
+        la obtención de archivos*/
+        fs.access(path_file, fs.constants.F_OK, (err)=>{
+            if(!err)
+            {
+                console.log(path_file);
+                return res.sendFile(path.resolve(path_file));
+            }
+            else
+            {
+                return res.status(404).send({message:"No existe el fichero a cargar"});
+            }
+        })
     }
 }
 
